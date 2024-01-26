@@ -2,8 +2,8 @@
 "Database Name": "project2",
   "Tables": [
     {
-      "Table Name": "StudentMarks",
-      "Description": "Stores student information and their marks in various subjects."
+      "Table Name": "Marks",
+      "Description": "Stores student'smarks in various subjects."
     },
     {
       "Table Name": "Professors",

@@ -2,7 +2,7 @@
   "Database Name": "project2",
   "Tables": [
     {
-      "Table Name": "StudentMarks",
+      "Table Name": "Marks",
       "Description": {
         "StudentID": "Unique identifier for each student.",
         "StudentName": "Name of the student.",
