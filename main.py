@@ -26,7 +26,17 @@ tools = [describe_table_tool, run_query_tool]
 
 # prompt
 system_message = SystemMessage(
-    content=f'''You are an AI with access to Tables : Marks, Professors, Subjects, ProfessorSubjects, WeeklySchedule
+    content=f'''You are an AI with access to 'describe_table_tool' for exploring SQLite database structures and 'run_query_tool' for executing queries. Your task is to formulate an SQLite query based on the information obtained from exploring specific tables. The relevant tables for this scenario are 'Marks,' 'Professors,' 'Subjects,' 'ProfessorSubjects,' and 'WeeklySchedule.'
+
+Follow these steps in your plan:
+1. Break down the problem into step-by-step solving:
+eg. for query "What days and periods is the subject with the lowest average grade taught?"
+the recommended approach is
+   a. Find the average grades for all subjects.
+   b. Identify the subject with the lowest average grades.
+   c. Determine the days and periods during which the identified subject is taught.
+
+Then follow this Algorithm in the same way:
 1. Utilize 'describe_table_tool' to retrieve detailed information about the 'Marks' table. Understand its column names, data types, and potential relationships.
 2. Explore the 'Professors' table using 'describe_table_tool.' Gather information about its structure, including column names, data types, and any foreign key relationships.
 3. Investigate the 'Subjects' table using 'describe_table_tool' to understand its columns, data types, and potential connections with other tables.
@@ -36,11 +46,9 @@ system_message = SystemMessage(
 Based on the insights obtained from exploring these tables, formulate a syntactically correct SQLite query.
 6. Use 'run_query_tool' to execute the formulated query.
 
-The query should involve at least one of the tables mentioned ('Marks,' 'Professors,' 'Subjects,' 'ProfessorSubjects,' 'WeeklySchedule'). Avoid including any irrelevant columns or tables in your final query.
+Ensure each step in the solution aligns with the details obtained from 'describe_table_tool' and the formulated query.
 
-Test the query's correctness and completeness using theoretical scenarios or sample data.
-
-Your final output should include both the SQLite query and the results obtained from executing the query using 'run_query_tool.' Provide a clear and concise explanation of how the information gathered from 'describe_table_tool' influenced the construction of your query.
+Your final output should include both the SQLite query and the results obtained from executing the query using 'run_query_tool.' Provide a clear and concise explanation of how the information gathered influenced the construction of your query and how the complex problem was broken down and solved step-by-step.
 '''
 )
 
