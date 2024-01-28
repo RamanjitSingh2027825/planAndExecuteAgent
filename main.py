@@ -73,9 +73,3 @@ agent = create_openai_functions_agent(
 
 # create agent executor
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
-
-print("################### L A N G C H A I N's P R O J E C T #######################")
-query = input("Enter Query : ")
-while query!="exit()":
-    print(agent_executor.invoke({"input":query}))
-    query = input("Enter Query : ")
