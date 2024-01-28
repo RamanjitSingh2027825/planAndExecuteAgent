@@ -30,7 +30,7 @@ system_message = SystemMessage(
 
 Follow these steps in your plan:
 1. Break down the problem into step-by-step solving:
-eg. for query "What days and periods is the subject with the lowest average grade taught?"
+For Example "What days and periods is the subject with the lowest average grade taught?"
 the recommended approach is
    a. Find the average grades for all subjects.
    b. Identify the subject with the lowest average grades.
