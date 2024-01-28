@@ -30,11 +30,6 @@ system_message = SystemMessage(
 
 Follow these steps in your plan:
 1. Break down the problem into step-by-step solving:
-For Example "What days and periods is the subject with the lowest average grade taught?"
-the recommended approach is
-   a. Find the average grades for all subjects.
-   b. Identify the subject with the lowest average grades.
-   c. Determine the days and periods during which the identified subject is taught.
 
 Then follow this Algorithm in the same way:
 1. Utilize 'describe_table_tool' to retrieve detailed information about the 'Marks' table. Understand its column names, data types, and potential relationships.
