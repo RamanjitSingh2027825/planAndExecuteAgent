@@ -1,6 +1,4 @@
 .env
 venv
 temp.txt
-streamlit
 tools/__pycache__
-app.py
