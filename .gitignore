@@ -4,4 +4,3 @@ temp.txt
 streamlit
 tools/__pycache__
 app.py
-cache_cleaner.py
